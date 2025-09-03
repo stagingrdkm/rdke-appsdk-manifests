@@ -7,12 +7,8 @@
  image recipe for rdke base layer profile1 :  bitbake rdke-app-baselayer-p1
 -->
 <manifest>
-  <remote name="github" fetch="https://github.com/"/>
-
-  <default remote="github" revision="master" sync-j="4" />
+  <include name="sdk-oss/oss.kirkstone.xml" />
 
   <project remote="github" name="stagingrdkm/meta-rdke-appsdk-base-dev" revision="develop" path="meta-rdke-appsdk-base-dev"/>
-
- <include name="sdk-oss/oss.kirkstone.xml" />
 
 </manifest>
