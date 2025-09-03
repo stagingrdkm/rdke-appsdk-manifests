@@ -1,4 +1,7 @@
- are tip of kirkstone branches when analysed at 14 Aug 2025
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+      revisons are tip of kirkstone branches when analysed at 14 Aug 2025
 
 -->
 <manifest>
@@ -16,8 +19,7 @@
 <!--18/08/2025 commit on its kirkstone branch. Fixes still happen. To agree what revision to fix on
        see its revisions on https://github.com/yoctoproject/poky/commits/kirkstone/ 
   Currently taking from yocto directly. To be discussed if we should not take RDK poky fork used by MW/OSS layer instead and what version.
-  RDK7.0 uses this tag https://github.com/rdkcentral/poky/tree/rdk-4.2.0 which is significantly older version of 15/11/2024 with changes on top 
-  -->
+  RDK7.0 uses this tag https://github.com/rdkcentral/poky/tree/rdk-4.2.0 which is significantly older version of 15/11/2024 with changes on top --> 
   <project remote="github"
              name="yoctoproject/poky"
          revision="39df9602b1c0339519be81d1cba9a4a25379309a"
@@ -28,8 +30,7 @@
 <!--is 13/07/2025 commit on its kirkstone branch. so far last commit. To agree what revision to fix on
       see https://github.com/openembedded/meta-openembedded/commits/kirkstone/ 
  Currently taking from origin maintainer directly. To be discussed if we should not take RDK fork used by MW/OSS layer instead and what version.
- RDK7.0 uses tag https://github.com/rdkcentral/meta-openembedded/tree/rdk-4.0.0 which is significantly older version of 13/10/2024
- -->
+ RDK7.0 uses tag https://github.com/rdkcentral/meta-openembedded/tree/rdk-4.0.0 which is significantly older version of 13/10/2024 -->
   <project remote="oe-org"
              name="meta-openembedded"
          upstream="kirkstone"
