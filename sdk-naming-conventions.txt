@@ -1,0 +1,75 @@
+CONVENTIONS within rdke-appsdk-manifests  repo
+
+--------------
+1) Branches :
+--------------
+"develop" and "R1" for now. Idea is to have  "Rx" branch per new agreed base-layer or breaking RDKOS-App firebolt contract or breaking appsdk  release (eg once per RDK Major OS release, eg RDK7, TBD, compare to Android OS version).  "develop" stands for development preparing for "next base-layer, sdk release" (tip of trunk), Once a develop
+
+------------------------------------------------------------------
+2)Directory structure and file naming convention :
+------------------------------------------------------------------
+Naming conventions for files and directories within rdke-appsdk-manifest repo
+
+2a)directories on /
+---------------------------------------
+/app/
+/app-restricted/
+/base/
+/runtime/
+/sdk-oss/oss.xml
+/sdk-export/
+
+2b)Convention within /app dir
+---------------------------------------
+/app/companyname/appname/appname.dev.xml 
+/app/companyname/appname/rel/appname.rx.y.z.xml 
+  
+  [/companyname/appname/]  per company releasing/maintaining such appname. Some companynames we will prefix with number to ensure they appear on top in regular sorting
+  [appname.dev.xml] for manifest file name that contains dev branch of  meta-rdke-app-appname-company associated with the app.
+  [/companyname/appname/rel/appname.rx.y.z.xml] for  release versions of app,  manifest file name contains the associated version as extension in name 
+  [appname.rx.y.z.xml] for manifest file name with version extension in name for release app manifests, 
+      those manifests need to be fixed revision manifests that always allow the exact same  version of the app to be  rebuild/replicated from sources in that manifest
+  
+Example:  
+/app/0_rdkm/appname/rel/
+/app/0_rdkm/appname/appname.dev.xml 
+
+/app-restricted/ is for apps that have manifests that points to repositories that are not open source, require specific access rights
+
+
+2c)convention within /base dir
+---------------------------------------
+/base/base.dev.xml
+/base/rel/
+
+2d)convention within /runtime dir
+---------------------------------------
+/runtime/runtimename/runtimename.companyname.dev.xml     
+/runtime/runtimename/rel/runtimename.companyname.rx.y.z.xml   
+  [runtimename.companyname.dev.xmll] this manifest file name that contains dev branch of  meta-rdke-app-appname-company associated with this runtime
+  [rel/runtimename.companyname.rx.y.z.xml] for release version of runtime, manifest file name contains the associated version as extension in name 
+      those manifests need to be fixed revision manifests that always allow the exact same  version of the runtime to be rebuild/replicated from sources in that manifest
+
+Example:
+
+runtime/wpe/wpe238.rdkm.dev.xml
+runtime/wpe/wpe238.comcast.dev.xml 
+runtime/wpe/wpe246.igalia.dev.xml
+runtime/wpe/rel/wpe238.rdkm.r4.1.xml
+
+runtime/cobalt/cobalt25.rdkm.dev.xml
+runtime/cobalt/rel/cobalt25.rdkm.r1.0.xml
+
+----------------------------------------------------------------
+5)Associated git repo naming convention proposal
+------------------------------------------------------------------
+rdke-appsdk-manifests
+
+meta-rdke-appsdk-base-dev
+meta-rdke-appsdk-base-rel
+meta-rdke-appsdk-dmconfig
+
+meta-rdke-runtime-runtimename-company
+
+meta-rdke-app-appname-company
+
