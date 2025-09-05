@@ -25,4 +25,5 @@ https://github.com/stagingrdkm/meta-rdke-appsdk-distro
   This versioned manifest allows exact replication of that binary version from sources with the AppSDK
   The base.dev.xml is the "next" version that is still under development, not garanteed to be fixed versioned. 
 
+For directory and file naming convention see https://github.com/stagingrdkm/rdke-appsdk-manifests/blob/develop/sdk-naming-conventions.txt
 
