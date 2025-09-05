@@ -1,14 +1,14 @@
 # rdk-appsdk-manifests
 This repo is staging area and first stop for new AppSDK, exact name TBD, also tentatively named  new Firebolt native App SDK, DAC2.0 SDK.
 
-This repository contains several repo manifests with applications and runtimes that can be build with App SDK 
-Their build output, their binaries should be able to run on any Firebolt2 compliant RDK7+/RDK8 devices with AppInfra2.0  
+This repository contains several repo manifests with applications and runtimes that can be build with App SDK. 
+Their build output, their binaries should be able to run on any Firebolt2 compliant RDK7+/RDK8 devices with AppInfra2.0.  
 
 A particular manifests typically points to :  
-   -the meta-layers of the App SDK (that include the base layer in binary or source).
-   -the meta-layer for the particular app or runtime. 
-   -together it allows to successfully build the particular app or runtime layer with the Yocto App SDK.
-
+   -the meta-layers of the App SDK (that include the base layer in binary or source).  
+   -the meta-layer for the particular app or runtime.  
+   -together it allows to successfully build the particular app or runtime layer with the Yocto App SDK.  
+   
 The meta-layer of the App SDK are :  
 https://github.com/stagingrdkm/meta-rdke-appsdk-base-dev (source version of base layer)  
 https://github.com/stagingrdkm/meta-rdke-appsdk-base-rel (binary release version of base layer, not created yet)  
